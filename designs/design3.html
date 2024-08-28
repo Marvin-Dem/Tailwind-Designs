@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="./output.css" rel="stylesheet" />
+        <script type="module" src="/src/main.ts"></script>
     </head>
-    <body class="bg-black">
-        <div class="border-rounded border-opacity-40 text-white">
-            <div class="grid grid-cols-2">
-                <span>Stand</span>
+    <body class="bg-black flex flex-col items-center justify-center">
+        <div class="border rounded-lg border-gray-600 text-white">
+            <div class="grid grid-cols-2 gap-5 text-2xl">
+                <span class="flex justify-end items-center text-gray-400"
+                    >Stand</span
+                >
                 <div
-                    class="bg-lightred border rounded border-transparent h-16 w-32"
+                    class="bg-lightred border rounded-lg border-transparent h-16 w-64 flex items-center p-3"
                 >
                     8/12 hr
                 </div>
-                <span>Exercise</span>
+                <span class="flex justify-end items-center text-gray-400"
+                    >Exercise</span
+                >
                 <div
-                    class="bg-orange border rounded border-transparent h-16 w-48"
+                    class="bg-orange border rounded-lg border-transparent h-16 w-96 flex items-center p-3"
                 >
                     46/60 min
                 </div>
-                <span>Move</span>
+                <span class="flex justify-end items-center text-gray-400"
+                    >Move</span
+                >
                 <div
-                    class="bg-blue border rounded border-transparent h-16 w-32"
+                    class="bg-blue border rounded-lg border-transparent h-16 w-64 flex items-center p-3"
                 >
                     245/360 kcal
                 </div>
             </div>
-            <div>
-                <div>
-                    <span>Move</span>
-                    <span>562</span>
-                    <span>kcal</span>
+            <div
+                class="grid grid-cols-3 text-white text-2xl border-t border-gray-600 py-6"
+            >
+                <div class="flex flex-col px-6">
+                    <span class="text-gray-400">Move</span>
+                    <div>
+                        <span class="text-5xl font-bold">562</span>
+                        <span class="text-gray-400">kcal</span>
+                    </div>
                 </div>
-                <div>
-                    <span>Exercise</span>
-                    <span>73</span>
-                    <span>min</span>
+                <div class="flex flex-col px-6 border-l border-gray-600">
+                    <span class="text-gray-400">Exercise</span>
+                    <div>
+                        <span class="text-5xl font-bold">73</span>
+                        <span class="text-gray-400">min</span>
+                    </div>
                 </div>
-                <div>
-                    <span>Stand</span>
-                    <span>14</span>
-                    <span>hr</span>
+                <div class="flex flex-col px-6 border-l border-gray-600">
+                    <span class="text-gray-400">Stand</span>
+                    <div>
+                        <span class="text-5xl font-bold">14</span>
+                        <span class="text-gray-400">hr</span>
+                    </div>
                 </div>
             </div>
         </div>

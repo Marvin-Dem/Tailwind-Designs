@@ -1,7 +1,9 @@
+import TestPage from "./pages/test-page";
+
 function App() {
   return (
-    <div className="flex justify-center items-center h-screen">
-      <h1 className="text-2xl">Hello from React</h1>
+    <div className="flex justify-center items-center h-screen bg-slate-200">
+      <TestPage />
     </div>
   );
 }

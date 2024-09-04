@@ -1,11 +1,11 @@
-import TestPage from "./pages/test-page";
+import CounterPage from "./pages/counter";
 
 function App() {
-  return (
-    <div className="flex justify-center items-center h-screen bg-slate-200">
-      <TestPage />
-    </div>
-  );
+    return (
+        <div className="flex justify-center items-center h-screen bg-slate-200">
+            <CounterPage />
+        </div>
+    );
 }
 
 export default App;

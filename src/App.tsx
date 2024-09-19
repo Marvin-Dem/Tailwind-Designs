@@ -1,9 +1,9 @@
-import Dice from "./pages/dice";
+import RandomColor from "./pages/randomcolor";
 
 function App() {
     return (
         <div className="flex justify-center items-center h-screen bg-slate-200">
-            <Dice />
+            <RandomColor />
         </div>
     );
 }

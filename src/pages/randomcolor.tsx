@@ -23,7 +23,7 @@ export default function RandomColor() {
             className="mb-12 flex flex-col gap-4 justify-center items-center w-full h-full"
             style={{ backgroundColor: randomColor }}
         >
-            <div className="bg-black rounded-lg w-fit font-bold flex p-4 flex gap-2 text-xl">
+            <div className="bg-black rounded-lg w-fit font-bold p-4 flex gap-2 text-xl">
                 <div className="text-white">Background Color :</div>
                 <div className="text-blue">{randomColor}</div>
             </div>

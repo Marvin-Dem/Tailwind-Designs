@@ -16,14 +16,16 @@ export default function RandomColor() {
     const clickFunction = () => {
         const newColor = generateRandomColor();
         setRandomColor(newColor);
-        document.body.style.backgroundColor = newColor;
     };
 
     return (
-        <div>
-            <div className="bg-black rounded-lg w-fit font-bold flex">
+        <div
+            className="mb-12 flex flex-col gap-4 justify-center items-center w-full h-full"
+            style={{ backgroundColor: randomColor }}
+        >
+            <div className="bg-black rounded-lg w-fit font-bold flex p-4 flex gap-2 text-xl">
                 <div className="text-white">Background Color :</div>
-                <div className="text-blue-500">{randomColor}</div>
+                <div className="text-blue">{randomColor}</div>
             </div>
             <Button
                 onClick={() => {

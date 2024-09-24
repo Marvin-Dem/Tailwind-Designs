@@ -1,28 +1,22 @@
 import { useState } from "react";
 
-const counter = 0;
-
 export default function SomePage() {
-    const [count, setCount] = useState(1);
+    const [count, setCount] = useState(0);
 
     const increment = () => {
-        setCount(count - 1);
+        setCount(count + 1);
     };
-
-    function handleClick() {
-        increment();
-    }
 
     return (
         <div>
-            <h2 className="text-2xl">Welcome to the Main Page</h2>
-            <h1 className="text-lg mb-6">
+            <h1 className="text-2xl">Welcome to the Main Page</h1>
+            <h2 className="text-lg mb-6">
                 Click the button to increment the counter
-            </h1>
+            </h2>
             <div>
-                <p>Clicked {counter} tiems.</p>
+                <p>Clicked {count} times.</p>
                 <button
-                    onClick={() => handleClick}
+                    onClick={() => increment()}
                     className="border rounded border-black p-2"
                 >
                     Increment

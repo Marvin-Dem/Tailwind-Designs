@@ -1,9 +1,9 @@
-import SomePage from "./pages/some-page";
+import OtherPage from "./pages/other-page";
 
 function App() {
     return (
         <div className="flex justify-center items-center h-screen bg-slate-200">
-            <SomePage />
+            <OtherPage />
         </div>
     );
 }

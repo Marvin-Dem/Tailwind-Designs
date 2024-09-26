@@ -1,51 +1,48 @@
 import { useEffect, useState } from "react";
 
 function logHello() {
-    // this function shall stay
-    export function innerFunction() {
-        const x: string = "hello";
-        return x;
+    function returnHello() {
+        const hello = "hello";
+        return hello;
     }
-
-    console.log(x);
+    console.log(returnHello());
 }
 
-function getFamilyName(givenName) {
-    const lastName = "";
+function getFamilyName(givenName: string) {
+    let familyName;
     if (givenName === "Udo") {
-        lastName = "Lindenberg";
+        familyName = "Lindenberg";
     } else if (givenName === "Thomas") {
-        lastName = "Gottschalk";
+        familyName = "Gottschalk";
     } else if (givenName === "Stefan") {
-        lastName = "Raab";
+        familyName = "Raab";
+    } else {
+        console.log("Name is not available");
     }
+    return familyName;
 }
 
-function functionThatShouldOnlyBeCallableDirectlyFromPublicFunction() {
-    // do secret things
-}
-
-export function publicFunction() {
+function publicFunction() {
+    function functionThatShouldOnlyBeCallableDirectlyFromPublicFunction() {
+        // do secret things
+    }
     return functionThatShouldOnlyBeCallableDirectlyFromPublicFunction();
 }
 
 function mightThrowError() {
     const value = Math.random();
     if (value < 0.25) {
-        throw new Error("Value too small");
+        throw Error("Value too small");
     } else if (value > 0.75) {
-        throw new Error("Value too big");
+        throw Error("Value too big");
     } else {
         return value;
     }
 }
 
 function doStaticThings() {
-    const hello = logHello();
-    console.log(hello);
-
+    logHello();
     publicFunction();
-    functionThatShouldOnlyBeCallableDirectlyFromPublicFunction();
 
     const udosFamilyName = getFamilyName("Udo");
     const stefansFamilyName = getFamilyName("Stefan");
@@ -58,17 +55,13 @@ function doStaticThings() {
     );
 
     const baseValue = 10;
-
+    let sum;
     try {
         const value = mightThrowError();
-    } catch {
-        console.error(
-            "I would like to be a dynamic error instead of this static string"
-        );
+        sum = baseValue + value;
+    } catch (e) {
+        console.error(e);
     }
-
-    const sum = baseValue + value;
-
     console.log("sum: ", sum);
 }
 
